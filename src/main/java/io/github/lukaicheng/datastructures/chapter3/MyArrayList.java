@@ -108,13 +108,13 @@ public class MyArrayList<T> implements Iterable<T> {
     }
 
     private void rangeCheck(int index) {
-        if (index < 0 && index >= size()) {
+        if (index < 0 || index >= size()) {
             throw new IndexOutOfBoundsException();
         }
     }
 
     private void rangeCheckForAdd(int index) {
-        if (index < 0 && index > size()) {
+        if (index < 0 || index > size()) {
             //Add相比Get、Set，允许在末尾插入
             throw new IndexOutOfBoundsException();
         }
