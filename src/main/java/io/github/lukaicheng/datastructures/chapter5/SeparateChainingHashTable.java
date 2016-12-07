@@ -10,6 +10,8 @@ import java.util.List;
  * JDK中的HashMap正式基于此原理设计实现而成
  * 
  * load factor : 散列表元素个数与该表大小的比。本实现中其值相当于1
+ * 
+ * @see https://users.cs.fiu.edu/~weiss/dsaajava2/code/SeparateChainingHashTable.java
  */
 public class SeparateChainingHashTable<T> {
 
@@ -91,7 +93,7 @@ public class SeparateChainingHashTable<T> {
      * @param n the starting number (must be positive).
      * @return a prime number larger than or equal to n.
      */
-    private static int nextPrime(int n) {
+    private int nextPrime(int n) {
         if (n % 2 == 0) {
             n++;
         }
@@ -107,7 +109,7 @@ public class SeparateChainingHashTable<T> {
      * @param n the number to test.
      * @return the result of the test.
      */
-    private static boolean isPrime(int n) {
+    private boolean isPrime(int n) {
         if (n == 2 || n == 3) {
             return true;
         }
