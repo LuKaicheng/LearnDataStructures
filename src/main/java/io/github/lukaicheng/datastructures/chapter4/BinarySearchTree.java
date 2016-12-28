@@ -165,7 +165,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     }
 
     /**
-     * 以先序遍历打印树
+     * 以中序遍历打印树
      */
     private void printTree(BinaryNode<T> node) {
         if (node != null) {
